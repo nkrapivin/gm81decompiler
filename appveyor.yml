@@ -7,7 +7,7 @@ build:
   project: decompiler.sln
   verbosity: minimal
 after_build:
-  - 7z a -tzip decompiler-Debug.zip .\bin\Debug\*
+  - 7z a -tzip decompiler-Debug.zip .\Debug\*
 artifacts:
   - path: decompiler-Debug.zip
     name: decompiler
