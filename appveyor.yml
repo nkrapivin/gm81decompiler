@@ -1,0 +1,13 @@
+version: 99.99.{build}
+os: Visual Studio 2013
+platform:
+  - Win32
+configuration: Debug
+build:
+  project: decompiler.sln
+  verbosity: minimal
+after_build:
+  - 7z a -tzip decompiler-Debug.zip .\bin\Debug\*
+artifacts:
+  - path: decompiler-Debug.zip
+    name: decompiler
